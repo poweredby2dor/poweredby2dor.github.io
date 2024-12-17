@@ -1,274 +1,400 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Tudor Cernat</title>
+    <meta content="" name="description" />
+    <meta content="" name="keywords" />
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tudor Cernat - QA Engineer Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <style>
-        .tech-icons i:hover {
-            transform: scale(1.2);
-        }
-        /* Additional styling for image */
-        
-        .intro-image img {
-            max-width: 100%;
-            height: auto;
-            max-height: 400px;
-            border-radius: 50%;
-            border: 3px solid rgba(172, 48, 233, 0.5);
-            /* Light border color */
-            box-shadow: 0 0 10px rgba(172, 48, 233, 0.6), 0 0 20px rgba(172, 48, 233, 0.4), 0 0 30px rgba(172, 48, 233, 0.2);
-            animation: pulseGlow 2s infinite;
-        }
-        
-        .view-btn {
-            display: inline-block;
-            background: linear-gradient(90deg, #00d084, #00b5e2);
-            color: #fff;
-            border: none;
-            padding: 10px 15px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-weight: bold;
-            text-decoration: none;
-            text-align: center;
-            transition: background 0.3s ease;
-        }
-        
-        .view-btn:hover {
-            background: linear-gradient(90deg, #00b5e2, #00d084);
-        }
-        
-        @keyframes pulseGlow {
-            0%,
-            100% {
-                box-shadow: 0 0 10px rgba(172, 48, 233, 0.6), 0 0 20px rgba(172, 48, 233, 0.4), 0 0 30px rgba(172, 48, 233, 0.2);
-            }
-            50% {
-                box-shadow: 0 0 20px rgba(172, 48, 233, 0.7), 0 0 40px rgba(172, 48, 233, 0.5), 0 0 60px rgba(172, 48, 233, 0.3);
-            }
-        }
-        /* Light/Dark Mode Toggle */
-        
-        .switch {
-            position: relative;
-            display: inline-block;
-            width: 50px;
-            height: 24px;
-        }
-        
-        .switch input {
-            opacity: 0;
-            width: 0;
-            height: 0;
-        }
-        
-        .slider {
-            position: absolute;
-            cursor: pointer;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-color: #ccc;
-            transition: 0.4s;
-            border-radius: 24px;
-        }
-        
-        .slider:before {
-            position: absolute;
-            content: "";
-            height: 20px;
-            width: 20px;
-            left: 4px;
-            bottom: 2px;
-            background-color: white;
-            transition: 0.4s;
-            border-radius: 50%;
-        }
-        
-        input:checked+.slider {
-            background-color: #2196F3;
-        }
-        
-        input:checked+.slider:before {
-            transform: translateX(26px);
-        }
-        /* Auto-typing effect */
-        
-        .typing-text {
-            display: inline-block;
-            overflow: hidden;
-            white-space: nowrap;
-            border-right: 2px solid #00D084;
-            animation: typing 3s steps(30, end), blink-caret 0.5s step-end infinite;
-        }
-        
-        @keyframes typing {
-            from {
-                width: 0;
-            }
-            to {
-                width: 100%;
-            }
-        }
-        
-        @keyframes blink-caret {
-            50% {
-                border-color: transparent;
-            }
-        }
-    </style>
-</head>
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon" />
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
 
-<body>
-    <header class="dark-menu header">
-        <a href="#" class="logo" style="display: flex; align-items: center; text-decoration: none;">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
 
-            <span class="grey-color">&lt;</span>
-            <span class="logo-name" id="logoName" style="color: #ac30e9; font-weight: bold; font-size: 24px; text-shadow: 0px 0px 5px rgba(172, 48, 233, 0.7);">Tudor Cernat</span>
-            <span class="grey-color">/&gt;</span>
-        </a>
+    <!-- Vendor CSS Files -->
+    <link
+      href="assets/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+    <link
+      href="assets/vendor/glightbox/css/glightbox.min.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
 
-        <ul class="dark-menu menu">
+    <!-- Main CSS File -->
+    <link href="assets/css/main.css" rel="stylesheet" />
+  </head>
 
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#certifications">Certifications</a></li>
-            <li><a href="#contact">Contact Me</a></li>
-            <li>
-                <label class="switch">
-                    <input type="checkbox" id="modeToggle">
-                    <span class="slider round"></span>
-                </label>
-            </li>
+  <body class="index-page">
+    <header id="header" class="header dark-background d-flex flex-column">
+      <i class="header-toggle d-xl-none bi bi-list"></i>
+
+      <div class="profile-img">
+        <img
+          src="assets/img/my-profile-img.jpg"
+          alt=""
+          class="img-fluid rounded-circle"
+        />
+      </div>
+
+      <a
+        href="index.html"
+        class="logo d-flex align-items-center justify-content-center"
+      >
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.png" alt=""> -->
+        <h1 class="sitename">Tudor Cernat</h1>
+      </a>
+
+      <div class="social-links text-center">
+        <a
+          href="https://www.facebook.com/poweredby2dor?locale=ro_RO"
+          class="facebook"
+          ><i class="bi bi-facebook"></i
+        ></a>
+        <a href="https://www.instagram.com/poweredby2dor/" class="instagram"
+          ><i class="bi bi-instagram"></i
+        ></a>
+        <a href="https://github.com/poweredby2dor" class="google-plus"
+          ><i class="bi bi-github"></i
+        ></a>
+        <a
+          href="https://www.linkedin.com/in/tudor-cernat-92271157/"
+          class="linkedin"
+          ><i class="bi bi-linkedin"></i
+        ></a>
+      </div>
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li>
+            <a href="#portfolio"
+              ><i class="bi bi-images navicon"></i> Portfolio</a
+            >
+          </li>
+          <li>
+            <a href="#about"><i class="bi bi-person navicon"></i> About</a>
+          </li>
+          <button id="theme-toggle" class="theme-toggle">🌙 Dark Mode</button>
+
         </ul>
+      </nav>
     </header>
 
-    <!-- <section class="intro">
-        <div class="intro-text">
-            <h2>Hi, I'm Tudor <span class="typing-text">| QA Engineer</span> 👋</h2>
-            <p>Senior Engineer with expertise in Quality Assurance, Automation, and Firmware Validation. Passionate about technology, problem-solving, and leading testing processes to deliver high-quality results.</p>
-            <div class="buttons">
-                <button onclick="window.location.href='mailto:tudor.cernat@example.com'">Contact Me</button>
-            </div>
+    <main class="main">
+    
+      <!-- Portfolio Section -->
+      <section id="portfolio" class="portfolio section light-background">
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+          <h2>Portfolio</h2>
+          <p>
+            Explore some of the applications I’ve developed, showcasing my
+            skills in QA and development.
+          </p>
+        </div>
+        <!-- End Section Title -->
 
-            <div class="social-links">
-                <a href="https://github.com/your-github"><img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" width="30"></a>
-                <a href="https://www.linkedin.com/in/tudor-cernat/"><img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" width="30"></a>
-                <a href="mailto:tudor.cernat@example.com"><img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email" width="30"></a>
+        <div class="container">
+          <div class="row gy-4">
+            <!-- App 1 -->
+            <div class="col-lg-4 col-md-6 portfolio-item">
+              <div class="portfolio-content">
+                <img
+                  src="assets/img/portfolio/app-1.jpg"
+                  class="img-fluid"
+                  alt="App 1"
+                />
+              </div>
+              <div class="portfolio-details mt-3">
+                <h4>Automated Liquid Mixing System</h4>
+                <p>An automated system for precise chemical mixtures.</p>
+                <p><strong>Programming Language:</strong> Python</p>
+                <p><strong>Year:</strong> 2024</p>
+                <a
+                  href="https://github.com/poweredby2dor/engineering-degree-project"
+                  title="GitHub Repository"
+                  class="details-link"
+                  target="_blank"
+                >
+                  <i class="bi bi-github"></i> GitHub
+                </a>
+              </div>
             </div>
+            <!-- End App 1 -->
+        
+            <!-- App 2 -->
+            <div class="col-lg-4 col-md-6 portfolio-item">
+              <div class="portfolio-content">
+                <img
+                  src="assets/img/portfolio/app-2.jpg"
+                  class="img-fluid"
+                  alt="App 2"
+                />
+              </div>
+              <div class="portfolio-details mt-3">
+                <h4>Silent Air Compressor</h4>
+                <p>A silent air compressor designed for indoor use.</p>
+                <p><strong>Programming Language:</strong> C++</p>
+                <p><strong>Year:</strong> 2023</p>
+                <a
+                  href="https://github.com/poweredby2dor/DIY-air-compressor"
+                  title="GitHub Repository"
+                  class="details-link"
+                  target="_blank"
+                >
+                  <i class="bi bi-github"></i> GitHub
+                </a>
+              </div>
+            </div>
+            <!-- End App 2 -->
+        
+            <!-- App 3 -->
+            <div class="col-lg-4 col-md-6 portfolio-item">
+              <div class="portfolio-content">
+                <img
+                  src="assets/img/portfolio/app-3.jpg"
+                  class="img-fluid"
+                  alt="App 3"
+                />
+              </div>
+              <div class="portfolio-details mt-3">
+                <h4>Temperature-Controlled Fan</h4>
+                <p>A PWM-controlled fan for efficient cooling.</p>
+                <p><strong>Programming Language:</strong> Arduino (C++)</p>
+                <p><strong>Year:</strong> 2023</p>
+                <a
+                  href="https://github.com/poweredby2dor/pwm-fan-temperature-based-control"
+                  title="GitHub Repository"
+                  class="details-link"
+                  target="_blank"
+                >
+                  <i class="bi bi-github"></i> GitHub
+                </a>
+              </div>
+            </div>
+            <!-- End App 3 -->
+        
+            <!-- App 4 -->
+            <div class="col-lg-4 col-md-6 portfolio-item">
+              <div class="portfolio-content">
+                <img
+                  src="assets/img/portfolio/app-4.jpg"
+                  class="img-fluid"
+                  alt="App 4"
+                />
+              </div>
+              <div class="portfolio-details mt-3">
+                <h4>CNC Machine Project</h4>
+                <p>A CNC project for automated and precise manufacturing.</p>
+                <p><strong>Programming Language:</strong> G-code</p>
+                <p><strong>Year:</strong> 2022</p>
+                <a
+                  href="https://github.com/poweredby2dor/computer-numerical-control-project"
+                  title="GitHub Repository"
+                  class="details-link"
+                  target="_blank"
+                >
+                  <i class="bi bi-github"></i> GitHub
+                </a>
+              </div>
+            </div>
+            <!-- End App 4 -->
+        
+            <!-- App 5 -->
+            <div class="col-lg-4 col-md-6 portfolio-item">
+              <div class="portfolio-content">
+                <img
+                  src="assets/img/portfolio/app-5.jpg"
+                  class="img-fluid"
+                  alt="App 5"
+                />
+              </div>
+              <div class="portfolio-details mt-3">
+                <h4>Flower Self-Watering System</h4>
+                <p>An Arduino-based automatic flower watering system.</p>
+                <p><strong>Programming Language:</strong> Arduino (C++)</p>
+                <p><strong>Year:</strong> 2023</p>
+                <a
+                  href="https://github.com/poweredby2dor/DIY-flower-self-watering"
+                  title="GitHub Repository"
+                  class="details-link"
+                  target="_blank"
+                >
+                  <i class="bi bi-github"></i> GitHub
+                </a>
+              </div>
+            </div>
+            <!-- End App 5 -->
+        
+            <!-- App 6 -->
+            <div class="col-lg-4 col-md-6 portfolio-item">
+              <div class="portfolio-content">
+                <img
+                  src="assets/img/portfolio/app-6.jpg"
+                  class="img-fluid"
+                  alt="App 6"
+                />
+              </div>
+              <div class="portfolio-details mt-3">
+                <h4>Temperature & Humidity Monitor</h4>
+                <p>An Arduino project for monitoring temperature and humidity.</p>
+                <p><strong>Programming Language:</strong> Arduino (C++)</p>
+                <p><strong>Year:</strong> 2022</p>
+                <a
+                  href="https://github.com/poweredby2dor/temperature-and-humidity-monitor"
+                  title="GitHub Repository"
+                  class="details-link"
+                  target="_blank"
+                >
+                  <i class="bi bi-github"></i> GitHub
+                </a>
+              </div>
+            </div>
+            <!-- End App 6 -->
+          </div>
         </div>
-        <div class="intro-image">
-            <img src="profile.jfif" alt="Tudor Cernat">
+        
+      <!-- /Portfolio Section -->
+
+      <!-- About Section -->
+      <section id="about" class="about section">
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+          <h2>About</h2>
+          <p>
+            I am Tudor Cernat, a QA Automation Engineer with over six
+            years of experience in quality assurance, including two years
+            focused on automation. I am passionate about improving software
+            quality and optimizing workflows, specializing in developing robust
+            test frameworks, leading QA processes, and managing CI/CD pipelines
+            with tools like Jenkins, Git, and Python.
+          </p>
+          <br />
+          <p>
+            As a Test Process Owner at GoPro, I have successfully enhanced
+            efficiency through workflow improvements and Proof of Concepts. I
+            thrive in Agile environments, actively contributing to Scrum
+            workflows and collaborating with teams to deliver high-quality
+            results. Committed to continuous learning, I am currently deepening
+            my expertise in Selenium, Python, and advanced QA practices, always
+            aiming to provide innovative solutions that boost product quality
+            and team performance.
+          </p>
+          <br />
+          <p>
+            Driven and proactive, I am dedicated to achieving excellence in
+            every aspect of my work.
+          </p>
         </div>
-    </section> -->
-    <!-- <section class="skills-main-div" id="skills">
-        <div class="skills-illustration">
-            <img src="image.jfif" alt="Illustration of a person working on a laptop" style="max-width: 100%; height: auto; max-height: 400px;">
-        </div>
-        <div class="skills-text">
-            <h2>Skills</h2>
-            <div class="tech-icons">
-                <div style="text-align: center; margin: 10px;">
-                    <i class="fas fa-code" title="Scripting & Automation" style="font-size: 40px; color: #00D084;"></i>
-                    <p style="font-size: 16px; font-weight: bold; color: #00D084;">Scripting & Automation</p>
-                    <ul>
-                        <li>Python, Selenium, Robot Framework</li>
-                    </ul>
+        <!-- End Section Title -->
+
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+          <div class="row gy-4 justify-content-center">
+            <div class="col-lg-4">
+              <img
+                src="assets/img/my-profile-img.jpg"
+                class="img-fluid"
+                alt=""
+              />
+            </div>
+            <div class="col-lg-8 content">
+              <h2>QA Automation Engineer</h2>
+              <p class="fst-italic py-3">
+                I specialize in leading QA processes, optimizing test
+                frameworks, and managing CI/CD pipelines with tools like Jenkins
+                and Git. With over six years of QA experience, I bring
+                efficiency and innovation to every project I undertake.
+              </p>
+              <div class="row">
+                <div class="col-lg-6">
+                  <ul>
+                    <li>
+                      <i class="bi bi-chevron-right"></i>
+                      <strong>GitHub:</strong>
+                      <span
+                        ><a href="https://github.com/poweredby2dor"
+                          >github.com/poweredby2dor</a
+                        ></span
+                      >
+                    </li>
+                    <li>
+                      <i class="bi bi-chevron-right"></i>
+                      <strong>Phone:</strong> <span>(+40) 735 610 386</span>
+                    </li>
+                    <li>
+                      <i class="bi bi-chevron-right"></i>
+                      <strong>City:</strong> <span>Bucharest, Romania</span>
+                    </li>
+                  </ul>
                 </div>
-                <div style="text-align: center; margin: 10px;">
-                    <i class="fas fa-clipboard-check" title="Test Management" style="font-size: 40px; color: #FFC107;"></i>
-                    <p style="font-size: 16px; font-weight: bold; color: #FFC107;">Test Management</p>
-                    <ul>
-                        <li>JIRA, TestRail</li>
-                    </ul>
+                <div class="col-lg-6">
+                  <ul>
+                    <li>
+                      <i class="bi bi-chevron-right"></i>
+                      <strong>Degree:</strong>
+                      <span>Bachelor's in Automation Engineering</span>
+                    </li>
+                    <li>
+                      <i class="bi bi-chevron-right"></i>
+                      <strong>Email:</strong>
+                      <span
+                        ><a href="mailto:cernattudorliviu@gmail.com"
+                          >cernattudorliviu@gmail.com</a
+                        ></span
+                      >
+                    </li>
+                  </ul>
                 </div>
-                <div style="text-align: center; margin: 10px;">
-                    <i class="fas fa-laptop-code" title="Firmware Validation" style="font-size: 40px; color: #ac30e9;"></i>
-                    <p style="font-size: 16px; font-weight: bold; color: #ac30e9;">Firmware Validation</p>
-                    <ul>
-                        <li>Camera, IoT, Embedded Systems</li>
-                    </ul>
-                </div>
+              </div>
+              <p class="py-3">
+                With a strong foundation in Python and Agile methodologies, I am
+                committed to continuous learning and delivering innovative
+                solutions that enhance software quality and streamline
+                workflows.
+              </p>
             </div>
+          </div>
         </div>
-    </section> -->
+      </section>
+      <!-- /About Section -->
 
-    <section class="projects-section" id="projects">
-        <h2>Projects</h2>
-        <div class="projects-container">
-            <div class="project-card">
-                <h3>Engineering Degree Project</h3>
-                <p>Automated Liquid Mixing System for precise chemical formulations.</p>
-                <p><strong>Language:</strong> C++ | <strong>Last Updated:</strong> Apr 27, 2020</p>
-                <button class="view-btn" onclick="window.open('https://github.com/poweredby2dor/engineering-degree-project', '_blank')">View Project</button>
-            </div>
-            <div class="project-card">
-                <h3>DIY Air Compressor</h3>
-                <p>Silent air compressor designed for indoor use.</p>
-                <p><strong>Language:</strong> C++ | <strong>Last Updated:</strong> Nov 29, 2019</p>
-                <button class="view-btn" onclick="window.open('https://github.com/poweredby2dor/DIY-air-compressor', '_blank')">View Project</button>
-            </div>
-            <div class="project-card">
-                <h3>PWM Fan Temperature-Based Control</h3>
-                <p>Temperature-controlled fan using PWM technology for efficient cooling.</p>
-                <p><strong>Language:</strong> C++ | <strong>Last Updated:</strong> Nov 1, 2019</p>
-                <button class="view-btn" onclick="window.open('https://github.com/poweredby2dor/pwm-fan-temperature-based-control', '_blank')">View Project</button>
-            </div>
-            <div class="project-card">
-                <h3>Computer Numerical Control (CNC) Project</h3>
-                <p>CNC machine project for automated and precise manufacturing.</p>
-                <p><strong>Language:</strong> C++ | <strong>Last Updated:</strong> Nov 16, 2019</p>
-                <button class="view-btn" onclick="window.open('https://github.com/poweredby2dor/computer-numerical-control-project', '_blank')">View Project</button>
-            </div>
-            <div class="project-card">
-                <h3>DIY Flower Self Watering</h3>
-                <p>Arduino-based flower self-watering system for hassle-free plant care.</p>
-                <p><strong>Language:</strong> C++ | <strong>Last Updated:</strong> Feb 23, 2020</p>
-                <button class="view-btn" onclick="window.open('https://github.com/poweredby2dor/DIY-flower-self-watering', '_blank')">View Project</button>
-            </div>
-            <div class="project-card">
-                <h3>Temperature and Humidity Monitor</h3>
-                <p>Arduino project to monitor and log temperature and humidity levels.</p>
-                <p><strong>Language:</strong> C++ | <strong>Last Updated:</strong> Oct 21, 2019</p>
-                <button class="view-btn" onclick="window.open('https://github.com/poweredby2dor/temperature-and-humidity-monitor', '_blank')">View Project</button>
-            </div>
-        </div>
-    </section>
+    <!-- Scroll Top -->
+    <a
+      href="#"
+      id="scroll-top"
+      class="scroll-top d-flex align-items-center justify-content-center"
+      ><i class="bi bi-arrow-up-short"></i
+    ></a>
 
+    <!-- Preloader -->
+    <div id="preloader"></div>
 
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/typed.js/typed.umd.js"></script>
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
 
-
-
-    <section class="certifications-section" id="certifications">
-        <h2>Certifications</h2>
-        <div class="certification-card">
-            <i class="fas fa-certificate"></i>
-            <p style="color: #00D084;">UiPath RPA Associate Certification</p>
-            <p>Issued Jul 2021</p>
-        </div>
-        <div class="certification-card">
-            <i class="fas fa-certificate"></i>
-            <p style="color: #2196F3;">Cambridge ESOL Level 2 (CAE)</p>
-            <p>Issued Jun 2008</p>
-        </div>
-    </section>
-
-
-    <section id="contact" class="contact-section">
-        <h2>Contact Me</h2>
-        <p>Quality Assurance Automation Engineer with over 2 years of experience in QA Automation and 6 years in QA field</p>
-        <div class="contact-info">
-            <p>Email: <a href="mailto:cernattudorliviu@gmail.com">cernattudorliviu@gmail.com</a></p>
-            <p>LinkedIn: <a href="https://www.linkedin.com/in/tudor-cernat-92271157/" target="_blank">Tudor Cernat</a></p>
-        </div>
-    </section>
-
-    <button onclick="topFunction()" id="topBtn" title="Go to top">Top</button>
-    <script src="script.js"></script>
-</body>
-
+    <!-- Main JS File -->
+    <script src="assets/js/main.js"></script>
+  </body>
 </html>
